@@ -33,6 +33,7 @@
 #define IPAD_UNKNOWN_NAMESTRING         @"Unknown iPad"
 
 #define APPLETV_2G_NAMESTRING           @"Apple TV 2G"
+#define APPLETV_3G_NAMESTRING           @"Apple TV 3G"
 #define APPLETV_UNKNOWN_NAMESTRING      @"Unknown Apple TV"
 
 #define IOS_FAMILY_UNKNOWN_DEVICE       @"Unknown iOS device"
@@ -70,6 +71,7 @@ typedef enum {
     UIDevice1GiPadMini,
     
     UIDeviceAppleTV2,
+    UIDeviceAppleTV3,
     UIDeviceUnknownAppleTV,
     
     UIDeviceUnknowniPhone,

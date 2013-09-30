@@ -171,6 +171,7 @@
     
     // Apple TV
     if ([platform hasPrefix:@"AppleTV2"])           return UIDeviceAppleTV2;
+    if ([platform hasPrefix:@"AppleTV3"])           return UIDeviceAppleTV3;
 
     if ([platform hasPrefix:@"iPhone"])             return UIDeviceUnknowniPhone;
     if ([platform hasPrefix:@"iPod"])               return UIDeviceUnknowniPod;
@@ -214,6 +215,7 @@
         case UIDeviceUnknowniPad : return IPAD_UNKNOWN_NAMESTRING;
             
         case UIDeviceAppleTV2 : return APPLETV_2G_NAMESTRING;
+        case UIDeviceAppleTV3 : return APPLETV_3G_NAMESTRING;
         case UIDeviceUnknownAppleTV: return APPLETV_UNKNOWN_NAMESTRING;
             
         case UIDeviceiPhoneSimulator: return IPHONE_SIMULATOR_NAMESTRING;
