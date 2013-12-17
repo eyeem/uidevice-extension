@@ -167,7 +167,8 @@
     if ([platform hasPrefix:@"iPad2,5"] || [platform hasPrefix:@"iPad2,6"] || [platform hasPrefix:@"iPad2,7"])              return UIDevice1GiPadMini;
     if ([platform hasPrefix:@"iPad2"])              return UIDevice2GiPad;
     if ([platform hasPrefix:@"iPad3,1"] || [platform hasPrefix:@"iPad3,2"] || [platform hasPrefix:@"iPad3,3"])              return UIDevice3GiPad;
-    if ([platform hasPrefix:@"iPad3"])              return UIDevice4GiPad;
+    if ([platform hasPrefix:@"iPad3,4"] || [platform hasPrefix:@"iPad3,5"] || [platform hasPrefix:@"iPad3,6"])
+		return UIDevice4GiPad;
 	if ([platform hasPrefix:@"iPad4,1"] || [platform hasPrefix:@"iPad4,2"])	return UIDevice4GiPadAir;
 	if ([platform hasPrefix:@"iPad4,4"] || [platform hasPrefix:@"iPad4,5"])	return UIDevice2GiPadMini;
     
