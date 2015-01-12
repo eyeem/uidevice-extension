@@ -213,6 +213,7 @@
         case UIDevice2GiPod: return IPOD_2G_NAMESTRING;
         case UIDevice3GiPod: return IPOD_3G_NAMESTRING;
         case UIDevice4GiPod: return IPOD_4G_NAMESTRING;
+		case UIDevice5GiPod: return IPOD_5G_NAMESTRING;
         case UIDeviceUnknowniPod: return IPOD_UNKNOWN_NAMESTRING;
             
         case UIDevice1GiPad : return IPAD_1G_NAMESTRING;
