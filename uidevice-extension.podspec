@@ -115,7 +115,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "IOKit"
+  s.framework  = "IOKit", "SystemConfiguration"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
