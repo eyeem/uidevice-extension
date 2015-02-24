@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "UIDevice-*.{h,m}", "Apple Sample Code/*.{h,m}"
+  s.source_files  = "UIDevice-*.{h,m}", "Apple Sample Code/*.{h,c}"
   s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
@@ -115,7 +115,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "IOKit", "CFNetwork"
+  s.framework  = "IOKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"
