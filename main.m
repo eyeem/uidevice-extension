@@ -6,7 +6,6 @@
 
 #import <UIKit/UIKit.h>
 #import "UIDevice-Reachability.h"
-#import "UIDevice-IOKitExtensions.h"
 #import "UIDevice-Hardware.h"
 #import "UIDevice-Capabilities.h"
 #import "UIDevice-Orientation.h"
