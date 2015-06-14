@@ -35,37 +35,5 @@
 - (BOOL) scheduleReachabilityWatcher: (id) watcher;
 - (void) unscheduleReachabilityWatcher;
 
-#ifdef SUPPORTS_UNDOCUMENTED_API
-// Don't use this code in real life, boys and girls. It is not App Store friendly.
-// It is, however, really nice for testing callbacks
-// DEVICE ONLY!!!!
-+ (void) setAPMode: (BOOL) yorn;
-#endif
 @end
-
-#ifdef SUPPORTS_UNDOCUMENTED_API
-@interface NSHost : NSObject
-{
-    NSArray *names;
-    NSArray *addresses;
-    void *reserved;
-}
-
-+ (id)currentHost;
-+ (void)_fixNSHostLeak;
-+ (id)hostWithName:(id)fp8;
-+ (id)hostWithAddress:(id)fp8;
-+ (BOOL)isHostCacheEnabled;
-+ (void)setHostCacheEnabled:(BOOL)fp8;
-+ (void)flushHostCache;
-- (BOOL)isEqualToHost:(id)fp8;
-- (id)name;
-- (id)names;
-- (id)address;
-- (id)addresses;
-- (id)description;
-- (void)dealloc;
-
-@end
-#endif
 
