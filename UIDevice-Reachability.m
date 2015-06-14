@@ -296,33 +296,4 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkConne
 	reachability = nil;
 }
 
-#ifdef SUPPORTS_UNDOCUMENTED_API
-#define SBSERVPATH  "/System/Library/PrivateFrameworks/SpringBoardServices.framework/SpringBoardServices"
-#define UIKITPATH "/System/Library/Framework/UIKit.framework/UIKit"
-
-// Don't use this code in real life, boys and girls. It is not App Store friendly.
-// It is, however, really nice for testing callbacks
-+ (void) setAPMode: (BOOL) yorn
-{
-	mach_port_t *thePort;
-	void *uikit = dlopen(UIKITPATH, RTLD_LAZY);
-	int (*SBSSpringBoardServerPort)() = dlsym(uikit, "SBSSpringBoardServerPort");
-	thePort = (mach_port_t *)SBSSpringBoardServerPort(); 
-	dlclose(uikit);
-	
-	// Link to SBSetAirplaneModeEnabled
-	void *sbserv = dlopen(SBSERVPATH, RTLD_LAZY);
-	int (*setAPMode)(mach_port_t* port, BOOL yorn) = dlsym(sbserv, "SBSetAirplaneModeEnabled");
-	setAPMode(thePort, yorn);
-	dlclose(sbserv);
-}
-
-// This uses the NSHost class illicitly
-+ (BOOL) networkAvailableByNSHost
-{
-	// Unavailable has only one address: 127.0.0.1
-	return !(([[[NSHost currentHost] addresses] count] == 1) && 
-			 [[[UIDevice currentDevice] localIPAddress] isEqualToString:@"127.0.0.1"]);
-}
-#endif
 @end
