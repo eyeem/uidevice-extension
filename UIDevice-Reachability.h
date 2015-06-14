@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define SUPPORTS_UNDOCUMENTED_API	0
-
 @protocol ReachabilityWatcher <NSObject>
 - (void) reachabilityChanged;
 @end
