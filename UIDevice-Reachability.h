@@ -27,7 +27,6 @@
 - (BOOL) networkAvailable;
 - (BOOL) activeWLAN;
 - (BOOL) activeWWAN;
-- (BOOL) performWiFiCheck;
 
 - (BOOL) forceWWAN; // via Apple
 - (void) shutdownWWAN; // via Apple
