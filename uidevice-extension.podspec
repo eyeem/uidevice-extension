@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "uidevice-extension"
-  s.version      = "0.0.5"
+  s.version      = "0.0.5e"
   s.summary      = "Categories that expand on the information provided by UIDevice"
 
   s.description  = <<-DESC
@@ -50,7 +50,7 @@ The project was originally started by Erica Sadun [github](https://github.com/er
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source       = { :git => "https://github.com/yoiang/uidevice-extension.git", :tag => "0.0.4" }
+  s.source       = { :git => "https://github.com/eyeem/uidevice-extension.git", :tag => "0.0.5e" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
