@@ -281,23 +281,11 @@ SCNetworkReachabilityRef reachability;
 
 
 #pragma mark WiFi Check and Alert
-- (void) privateShowAlert: (id) formatstring,...
-{
-	va_list arglist;
-	if (!formatstring) return;
-	va_start(arglist, formatstring);
-	id outstring = [[NSString alloc] initWithFormat:formatstring arguments:arglist];
-	va_end(arglist);
-	
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:outstring message:nil delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil];
-	[av show];
-}
 
 - (BOOL) performWiFiCheck
 {
 	if (![self networkAvailable] || ![self activeWLAN])
 	{
-		[self performSelector:@selector(privateShowAlert:) withObject:@"This application requires WiFi. Please enable WiFi in Settings and run this application again." afterDelay:0.5f];
 		return NO;
 	}
 	return YES;
